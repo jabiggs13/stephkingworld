@@ -1,561 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    
-     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
   <style>
     body { margin:0; padding:0; }
     .map { position:absolute; top:0; bottom:0; width:100%; }
   </style>
 
-    <title>Stephen's Universe</title>
+    <title>Rome Through the Ages</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- Custom styles for this template -->
-    <link href="css/freelancer.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<!-- Initiates Modal and Uses cookies for Dont Show Again Checkbox -->     
 
-  </head>
+</head>
 
-  <body id="page-top">
 
+    
+    
+    <body id="page-top" class="index">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Rome Through the Ages</a>
+                <!--<a class="navbar-brand" href="about.html">About</a>-->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                   <li class="page-scroll">
+                        <a href="index.html">Map</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="key.html">Key</a>
+                    </li>
+                    <!--<li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>-->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-      </div>
+        <!-- /.container-fluid -->
     </nav>
 
-    <!-- Header -->
-    <header class="masthead">
-      <div class="container">
-        <img class="img-fluid" src="img/profile.png" alt="">
-        <div class="intro-text">
-          <span class="name">Start Bootstrap</span>
-          <hr class="star-light">
-          <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
-        </div>
-      </div>
-    </header>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-      <div class="container">
-        <h2 class="text-center">Portfolio</h2>
-        <hr class="star-primary">
-        <div class="row">
-          <div class="col-sm-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
-            </a>
-          </div>
-          <div class="col-sm-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal2" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/cake.png" alt="">
-            </a>
-          </div>
-          <div class="col-sm-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal3" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/circus.png" alt="">
-            </a>
-          </div>
-          <div class="col-sm-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal4" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/game.png" alt="">
-            </a>
-          </div>
-          <div class="col-sm-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal5" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/safe.png" alt="">
-            </a>
-          </div>
-          <div class="col-sm-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal6" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="success" id="about">
-      <div class="container">
-        <h2 class="text-center">About</h2>
-        <hr class="star-light">
-        <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-          </div>
-          <div class="col-lg-8 mx-auto text-center">
-            <a href="#" class="btn btn-lg btn-outline">
-              <i class="fa fa-download"></i>
-              Download Theme
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="text-center">Contact Me</h2>
-        <hr class="star-primary">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-            <form name="sentMessage" id="contactForm" novalidate>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls">
-                  <label>Name</label>
-                  <input class="form-control" id="name" type="text" placeholder="Name" required data-validation-required-message="Please enter your name.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls">
-                  <label>Email Address</label>
-                  <input class="form-control" id="email" type="email" placeholder="Email Address" required data-validation-required-message="Please enter your email address.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls">
-                  <label>Phone Number</label>
-                  <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required data-validation-required-message="Please enter your phone number.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls">
-                  <label>Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required data-validation-required-message="Please enter a message."></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <br>
-              <div id="success"></div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-success btn-lg" id="sendMessageButton">Send</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
-      <div class="footer-above">
+    <!-- Header 
+    <header>
         <div class="container">
-          <div class="row">
-            <div class="footer-col col-md-4">
-              <h3>Location</h3>
-              <p>3481 Melrose Place
-                <br>Beverly Hills, CA 90210</p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/profile.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">Start Bootstrap</span>
+                        <hr class="star-light">
+                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                    </div>
+                </div>
             </div>
-            <div class="footer-col col-md-4">
-              <h3>Around the Web</h3>
-              <ul class="list-inline">
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-google-plus"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-linkedin"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-dribbble"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-col col-md-4">
-              <h3>About Freelancer</h3>
-              <p>Freelance is a free to use, open source Bootstrap theme created by
-                <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="footer-below">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              Copyright &copy; Your Website 2017
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    </header>-->
+    <body>
+<div id='map-tooltips-js' class='map'> </div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
+var mapTooltipsJS = L.mapbox.map('map-tooltips-js', 'mapbox.light')
+  .setView([41.901197, 12.478584], 14);
+var myLayer = L.mapbox.featureLayer().addTo(mapTooltipsJS);
+var geojson = [
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.477, 41.898]
+    },
+    properties: {
+      title: 'Pantheon:',
+      description: 'The Pantheon is a former Roman temple, now a church, in Rome, Italy, on the site of an earlier temple commissioned by Marcus Agrippa during the reign of Augustus (27 BC – 14 AD). For more information <a href = "http://www.rome.info/pantheon/">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/641883-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.492242, 41.890346]
+    },
+    properties: {
+      title: 'Colosseum',
+      description: 'The Colosseum or Coliseum, also known as the Flavian Amphitheatre, is an oval amphitheatre in the center of Rome. Built of concrete and sand,it is the largest amphitheatre ever built. For more information <a href = "http://www.the-colosseum.net/around/visit.htm" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/641883-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.492439, 41.879054]
+    },
+    properties: {
+      title: 'Baths of Caracalla',
+      description: 'The Baths of Caracalla were the second largest Roman public baths, or thermae, built in Rome between AD 212 and 217, during the reigns of Septimius Severus and Caracalla. For more information <a href = "http://www.archeorm.arti.beniculturali.it/en/archaeological-site/baths-caracalla" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/641883-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.485166, 41.886397]
+    },
+    properties: {
+      title: 'Circus Maximus',
+      description: 'The Circus Maximus (Latin for greatest or largest circus)is an ancient Roman chariot racing stadium and mass entertainment venue. Situated in the valley between the Aventine and Palatine hills, it was the first and largest stadium in ancient Rome and its later Empire. For more information <a href = "http://www.historvius.com/circus-maximus-738/" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/641883-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.486227, 41.895697]
+    },
+    properties: {
+      title: 'Markets of Trajan',
+      description: 'Trajan Market is a large complex of ruins located on the Via dei Fori Imperiali, at the opposite end to the Colosseum. For more information <a href = "https://en.wikipedia.org/wiki/Trajan%27s_Market" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/641883-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.453177, 41.904183]
+    },
+    properties: {
+      title: 'Vatican City',
+      description: 'Vatican City, officially Vatican City State or the State of Vatican City, is a walled enclave within the city of Rome. With an area of approximately 44 hectares (110 acres), and a population of 842, it is the smallest sovereign state in the world by both area and population. For more information <a href = "http://www.vaticanstate.va/content/vaticanstate/en.html" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/647055-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.482600, 41.908564]
+    },
+    properties: {
+      title: 'Villa Medici',
+      description: 'The Villa Medici is a mannerist villa and an architectural complex with a garden contiguous with the larger Borghese gardens, on the Pincian Hill next to Trinità dei Monti.  For more information <a href = "http://www.villamedici.it/en/villa-medici/visit/admission-opening-times/" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/647055-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.481370, 41.895519]
+    },
+    properties: {
+      title: 'Palazzo Venezia',
+      description: 'The Palazzo Venezia (formerly Palace of St. Mark) is a palazzo (palace) just north of the Capitoline Hill. For more information <a href = "http://museopalazzovenezia.beniculturali.it/index.php?en/4/history-palazzo-venezia-and-the-national-museum" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/647055-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.483334, 41.901172]
+    },
+    properties: {
+      title: 'Trevi Fountain',
+      description: 'The Trevi Fountain is a fountain in the Trevi district designed by Italian architect Nicola Salvi and completed by Pietro Bracci. Standing 26.3 metres (86 ft) high and 49.15 metres (161.3 ft) wide, it is the largest Baroque fountain in the city and one of the most famous fountains in the world. For more information <a href = "http://www.trevifountain.net" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/647055-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.474513, 41.899310]
+    },
+    properties: {
+      title: 'Palazzo Medama',
+      description: 'Palazzo Madama is the seat of the Senate of the Italian Republic. It was built atop the ruins of the ancient baths of Nero, next to Piazza Navona. For more information <a href = "http://www.visitatorino.com/en/palazzo_madama.htm" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/647055-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.482258, 41.892387]
+    },
+    properties: {
+      title: 'Temple of Jupiter Optimus Maximus',
+      description: 'The Temple of Jupiter Optimus Maximus, also known as the Temple of Jupiter Capitolinus was the most important temple in Ancient Rome, located on the Capitoline Hill. For more information <a href = "http://en.museicapitolini.org/sede/campidoglio_antico/tempio_di_giove_capitolino" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/641883-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.485326, 41.892463]
+    },
+    properties: {
+      title: 'Roman Forum',
+      description: 'The Roman Forum is a rectangular forum (plaza) surrounded by the ruins of several important ancient government buildings at the center of the city of Rome. Citizens of the ancient city referred to this space, originally a marketplace, as the Forum Magnum, or simply the Forum. For more information <a href = "https://www.rometoolkit.com/whattodo/roman_forum.html" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/641883-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.485026, 41.912855]
+    },
+    properties: {
+      title: 'Villa Borghese',
+      description: 'The Villa Borghese Pinciana ("Borghese villa on the Pincian Hill"), the villa built by the architect Flaminio Ponzio (and, after his death, finished by his assistant Giovanni Vasanzio), developing sketches by Scipione Borghese, who used it as a villa suburbana, a party villa, at the edge of Rome, and to house his art collection. For more information <a href = "https://www.rometoolkit.com/whattodo/borghese_gallery.htm" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/647055-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.511848, 41.893876]
+    },
+    properties: {
+      title: 'Temple of Minerva Medica',
+      description: 'The temple of Minerva Medica (akin to the temple of Apollo Medicus) was a temple in ancient Rome, built on the Esquiline Hill in the Republican era, though no remains of it have been found. Since the 17th century, it has been wrongly identified with the ruins of a nymphaeum on a nearby site, on account of the erroneous impression that the Athena Giustiniani had been found in its ruins. For more information <a href = "https://en.wikipedia.org/wiki/Temple_of_Minerva_Medica_(nymphaeum)" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/641883-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [12.487020, 41.899645]
+    },
+    properties: {
+      title: 'Palazzo Quirinale',
+      description: 'The Quirinal Palace (known in Italian as the Palazzo del Quirinale or simply Quirinale) is one of the three current official residences of the President of the Italian Republic, together with Villa Rosebery in Naples and tenuta di Castelporziano. For more information <a href = "http://palazzo.quirinale.it/visitapalazzo/prenota_en.html" target="_blank">click here.</a>',
+      //image: 'https://farm9.staticflickr.com/8571/15844010757_63b093d527_n.jpg',
+      icon: {
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/647055-200.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  }
+];
+// Set a custom icon on each marker based on feature properties.
+myLayer.on('layeradd', function(e) {
+ var marker = e.layer,
+   feature = marker.feature;
+ marker.setIcon(L.icon(feature.properties.icon));
+ var content = '<h2>' + feature.properties.title + '</h2>' + feature.properties.description + '';
+ marker.bindPopup(content);
+});
+myLayer.setGeoJSON(geojson);
+mapTooltipsJS.scrollWheelZoom.disable();
+</script>
+</body>
+<!--var content = '<h2>' + feature.properties.title + '</h2><img src="' + feature.properties.image + '" alt="">';-->
+   
+           
+ 
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top d-lg-none">
-      <a class="btn btn-primary js-scroll-trigger" href="#page-top">
-        <i class="fa fa-chevron-up"></i>
-      </a>
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
     </div>
 
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/cabin.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/cake.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/circus.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/game.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/safe.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/submarine.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  
 
-    <!-- Bootstrap core JavaScript -->
+    <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
-    <!-- Custom scripts for this template -->
+    <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
 
-  </body>
+</body>
 
 </html>
